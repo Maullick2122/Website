@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Environmental Storytelling </title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="futura" rel="stylesheet">
+  <link rel="stylesheet" href="environment_concepts.css">
+</head>
+<body>
+
+  <canvas id="grain"></canvas>
+  <div id="cursor"></div>
+  <div id="cursor-ring"></div>
+
+  <!-- Navigation -->
+  <header class="site-header">
+    <a class="nav-back" href="/Website/index.html">← Back</a>
+    <span class="page-title">Environmental Storytelling</span>
+    <span class="collection-count" id="collectionCount"></span>
+  </header>
+
+  <!-- Gallery grid — injected by JS -->
+  <main class="gallery-main" id="galleryMain"></main>
+
+  <!-- Lightbox — hidden until a collection is clicked -->
+  <div class="lightbox" id="lightbox" aria-hidden="true">
+    <div class="lightbox-backdrop" id="lightboxBackdrop"></div>
+
+    <button class="lb-close"   id="lbClose"   aria-label="Close">✕</button>
+    <button class="lb-prev"    id="lbPrev"    aria-label="Previous">←</button>
+    <button class="lb-next"    id="lbNext"    aria-label="Next">→</button>
+
+    <div class="lb-image-wrap" id="lbImageWrap">
+      <div class="lb-image-track" id="lbImageTrack"></div>
+    </div>
+
+    <footer class="lb-footer">
+      <div class="lb-meta">
+        <span class="lb-title" id="lbTitle"></span>
+        <span class="lb-sub"   id="lbSub"></span>
+      </div>
+      <div class="lb-counter">
+        <span id="lbCurrent">1</span>
+        <span class="lb-counter-sep">/</span>
+        <span id="lbTotal">3</span>
+      </div>
+    </footer>
+
+    <!-- Dot indicators -->
+    <div class="lb-dots" id="lbDots"></div>
+  </div>
+
+  <script src="gallery_config.js"></script>
+  <script src="environment_concepts.js"></script>
+</body>
+</html>
