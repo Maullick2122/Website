@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About</title>
+ <link rel="preconnect" href="futura-pt/FuturaCyrillicDemi.ttf">
+  <link href="futura-pt/FuturaCyrillicBook.ttf" rel="stylesheet">
+  <link rel="stylesheet" href="about.css">
+</head>
+<body>
+
+  <canvas id="grain"></canvas>
+  <div id="cursor"></div>
+  <div id="cursor-ring"></div>
+
+  <!-- Navigation -->
+  <a class="nav-back" href="index.html">← Back</a>
+  <span class="nav-title">About</span>
+  <a class="nav-CV" href="/Website/CV/CV_Maullick.pdf" download="CV"> Curriculum Vitae </a>
+
+  <!-- Image counter -->
+  <div class="image-counter">
+    <span id="counter-current">01</span>
+    <span class="counter-sep">/</span>
+    <span id="counter-total">10</span>
+  </div>
+
+  <!-- Main content -->
+  <main>
+
+    
+
+    <!-- Label above — changes with image -->
+    <div class="label-top">
+      <span class="label-index" id="label-index">01</span>
+      <span class="label-category" id="label-category">Creative Director</span>
+    </div>
+
+    <!-- Central draggable image frame -->
+    <div class="image-frame" id="imageFrame">
+      <div class="image-track" id="imageTrack">
+        <!-- canvas placeholder — replaced by real <img> tags when you have assets -->
+        <canvas id="imagePlaceholder"></canvas>
+      </div>
+      <div class="drag-hint" id="dragHint">
+        <span>drag</span>
+      </div>
+      <!-- speed indicator bar -->
+      <div class="speed-bar" id="speedBar"></div>
+    </div>
+
+    <!-- Label below — title linked to project/context -->
+    <div class="label-bottom">
+      <a class="label-title" id="labelTitle" href="#">
+        <span id="labelTitleText">Which Direction Will Art Go</span>
+      </a>
+      <span class="label-sub" id="labelSub">2024 — Present</span>
+    </div>
+
+  </main>
+
+  <!-- Bio text — bottom left -->
+  <div class="bio">
+    <span id="bioText"> Artist and philosopher at heart, story-telling nerd by soul and lecturer at work I strive to mean and to identify. Finding myself is the only true constant, for change is what I am most comfortable waking up to. Currently tackling the selfishness of giving. </span>
+  </div>
+
+  <script src="about.js"></script>
+</body>
+</html>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Maullick</title>
+  <!-- ═══════════════════════════════════════════════════════════════
+       FONT CONFIG — edit here to test different typefaces.
+       1. Swap the Google Fonts URL below for any fonts you want to try.
+       2. Update --font-display and --font-ui in the :root block inside
+          style.css to match the new family names.
+       Current:
+         --font-display  →  Cormorant Garamond  (headings, tagline, labels)
+         --font-ui       →  DM Mono             (small caps, counters, hints)
+       To try a different pair, e.g. Playfair Display + Space Mono:
+         Change the URL to include those families, then update the variables.
+  ═══════════════════════════════════════════════════════════════ -->
+  <link rel="preconnect" href="futura-pt/FuturaCyrillicDemi.ttf">
+  <link href="futura-pt/FuturaCyrillicBook.ttf" rel="stylesheet">
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <link rel="stylesheet" href="Index.css">
+</head>
+<body>
+
+  <canvas id="grain"></canvas>
+  <div id="cursor"></div>
+  <div id="cursor-ring"></div>
+
+  <!-- Video preview — sits behind the clock, masked to show outside the wheel -->
+  <div id="video-wrap">
+    <video id="preview-video" muted loop playsinline></video>
+  </div>
+
+  <a class="contact-link" href="/Website/Contact/contact.html">Contact</a>
+  <div class="corner-name">Maullick<em> Pushkarna</em></div>
+  <div class="corner-hint" id="cornerHint">Move your cursor</div>
+   <!-- <a class="archive-link" href="/Website/Archive/archive.html">Archive</a> -->
+
+
+  <!-- About link — top right, in line with project labels -->
+  <a class="about-link" href="about.html">About</a>
+
+  <!-- Sidebar label — title, subtitle, and project link -->
+  <div class="active-label" id="activeLabel">
+    <span class="active-label-title" id="activeName"></span>
+    <span class="active-label-sub"   id="activeSub"></span>
+    <a    class="active-label-link"  id="activeLink" href="#"></a>
+  </div>
+
+  <div id="scene">
+    <svg id="clock-svg" viewBox="-1 -1 2 2" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <filter id="hs" x="-80%" y="-80%" width="260%" height="260%">
+          <feDropShadow dx="0.004" dy="0.008" stdDeviation="0.01" flood-color="rgba(0,0,0,0.15)"/>
+        </filter>
+      </defs>
+
+      <!-- Face rings -->
+      <circle cx="0" cy="0" r="0.86" fill="none" stroke="rgba(20,18,14,0.07)" stroke-width="0.003"/>
+      <circle cx="0" cy="0" r="0.70" fill="none" stroke="rgba(20,18,14,0.04)" stroke-width="0.002"/>
+
+      <!-- Tick marks and thumbnails injected by JS -->
+      <g id="ticks"></g>
+      <g id="thumbnails"></g>
+
+      <!-- Clock hand -->
+      <g id="hand-group">
+        <line x1="0" y1="0.066" x2="0" y2="0.14"
+          stroke="rgba(20,18,14,0.28)" stroke-width="0.008" stroke-linecap="round"/>
+        <line x1="0" y1="0.066" x2="0" y2="-0.65"
+          stroke="#1c1a16" stroke-width="0.011" stroke-linecap="round" filter="url(#hs)"/>
+        <line x1="0" y1="-0.65" x2="0" y2="-0.73"
+          stroke="rgba(20,18,14,0.5)" stroke-width="0.004" stroke-linecap="round"/>
+        <polygon points="0,-0.755 0.016,-0.714 0,-0.674 -0.016,-0.714"
+          fill="#1c1a16" opacity="0.86"/>
+      </g>
+
+      <!-- Eye pivot — gear polygon built by JS -->
+      <g id="eye-pivot">
+        <polygon id="eye-gear"   fill="#1c1a16" opacity="0.88"/>
+        <circle  id="eye-sclera" cx="0" cy="0" r="0.05"  fill="#f7f5f0"/>
+        <circle  id="eye-iris"   cx="0" cy="0" r="0.036" fill="none" stroke="#1c1a16" stroke-width="0.009" opacity="0.85"/>
+        <circle  id="eye-pupil"  cx="0" cy="0" r="0.015" fill="#1c1a16" opacity="0.9"/>
+        <circle  id="eye-glint"  cx="0.008" cy="-0.012" r="0.004" fill="#f7f5f0" opacity="0.7"/>
+      </g>
+    </svg>
+
+    <div class="tagline">
+      <span class="tagline-which">What direction will Art go</span>
+      <!-- <span class="tagline-main">Art Go</span> -->
+    </div>
+  </div>
+
+  <!-- Load project config first, then the main script -->
+  <script src="projects.js"></script>
+  <script src="Index.js"></script>
+</body>
+</html>

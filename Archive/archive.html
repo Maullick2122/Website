@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <title>Archive</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300&family=DM+Mono:wght@300;400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="archive.css">
+</head>
+<body>
+
+  <canvas id="grain"></canvas>
+  <div id="cursor"></div>
+  <div id="cursor-ring"></div>
+
+  <a class="nav-back" href="/Website/index.html">← Back</a>
+  <span class="page-title">Archive</span>
+
+  <!-- Hint — shake or tilt -->
+  <div class="motion-hint" id="motionHint">
+    <span>Tilt or shake your device</span>
+  </div>
+
+  <!-- Physics world — items are appended here by JS -->
+  <div id="world"></div>
+
+  <!-- Fullscreen overlay -->
+  <div class="fs-overlay" id="fsOverlay" aria-hidden="true">
+    <button class="fs-close" id="fsClose">✕</button>
+    <div class="fs-media-wrap" id="fsMediaWrap"></div>
+    <div class="fs-label" id="fsLabel"></div>
+  </div>
+
+  <!-- Matter.js physics engine -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/matter-js/0.19.0/matter.min.js"></script>
+  <script src="archive_config.js"></script>
+  <script src="archive.js"></script>
+</body>
+</html>

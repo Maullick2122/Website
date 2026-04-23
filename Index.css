@@ -1,0 +1,329 @@
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+/* ═══════════════════════════════════════════════════════════════════
+   FONT VARIABLES — change only these two lines to swap typefaces.
+   --font-display : used for all headings, labels, tagline, titles
+   --font-ui      : used for small caps, counters, hints, mono text
+   Must match the family names loaded in the <link> in index.html.
+═══════════════════════════════════════════════════════════════════ */
+:root {
+  --font-display: 'rockwell', serif;
+  --font-ui:      'futura', monospace;
+
+  /* ═════════════════════════════════════════════════════════════════
+     LABEL OUTLINE — keeps project titles readable on any background.
+     --label-stroke-width : outline thickness, e.g. 0.5px – 2px
+     --label-stroke-color : outline colour
+     --label-fill-color   : text fill ("transparent" = outline-only)
+     --label-shadow       : glow for dark/busy backgrounds,
+                            e.g. "0 0 12px rgba(247,245,240,0.5)"
+                            Set to "none" to disable.
+     Set --label-stroke-width to 0px to turn the stroke off.
+  ═════════════════════════════════════════════════════════════════ */
+  --label-stroke-width: 0.6px;
+  --label-stroke-color: rgba(20,18,14,0.55);
+  --label-fill-color:   rgba(20,18,14,0.9);
+  --label-shadow:       0 0 18px rgba(247,245,240,0.65),
+                        0 0  6px rgba(247,245,240,0.4);
+}
+
+html, body {
+  width: 100%; height: 100%;
+  background: #f7f5f0;
+  overflow: hidden;
+  cursor: none;
+  border: 2.5px solid rgb(0, 0, 0);
+  min-height: 100vh;
+  margin: 0;
+}
+
+body { display: flex; align-items: center; justify-content: center; }
+
+/* ── Film grain ─────────────────────────────────────────────────── */
+canvas#grain {
+  position: fixed; inset: 0;
+  width: 100%; height: 100%;
+  pointer-events: none;
+  opacity: 0.03;
+  z-index: 0;
+}
+
+/* ── Video preview — behind the clock, masked to ring outside wheel */
+#video-wrap {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 1;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+#video-wrap.active { opacity: 1; }
+
+#preview-video {
+  position: absolute;
+  inset: 0;
+  width: 100%; height: 100%;
+  object-fit: cover;
+  /* opacity managed by JS crossfade — do not set here */
+}
+
+/* ── Scene ──────────────────────────────────────────────────────── */
+#scene {
+  position: relative;
+  width: min(88vw, 88vh);
+  height: min(88vw, 88vh);
+  z-index: 2;
+}
+
+#clock-svg {
+  position: absolute; inset: 0;
+  width: 100%; height: 100%;
+  overflow: visible;
+}
+
+/* ── Tagline ────────────────────────────────────────────────────── */
+.tagline {
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  pointer-events: none;
+  z-index: 10;
+  user-select: none;
+}
+
+.tagline-which {
+  font-family: var(--font-display);
+  font-size: 12px;
+  font-weight: 30;
+  letter-spacing: 0.25em;
+  color: rgba(0, 0, 0, 0.3);
+  text-transform: uppercase;
+  margin-bottom: 200px;
+  display: block;
+}
+
+.tagline-main {
+  font-family: var(--font-display);
+  font-size: clamp(0.58rem, 1.45vw, 0.98rem);
+  font-weight: 300;
+  letter-spacing: 0.32em;
+  color: rgba(30,28,24,0.13);
+  text-transform: uppercase;
+  line-height: 1;
+}
+
+/* ── Corner labels ──────────────────────────────────────────────── */
+.corner-name {
+  position: fixed;
+  bottom: clamp(1.2rem, 3vh, 2rem);
+  left: clamp(1.5rem, 3vw, 2.5rem);
+  font-family: var(--font-display);
+  font-size: clamp(1rem, 2vw, 1.35rem);
+  font-weight: 300;
+  color: rgba(30,28,24,0.28);
+  letter-spacing: 0.07em;
+  pointer-events: none;
+  z-index: 100;
+}
+.corner-name em { font-style: italic; color: rgba(30,28,24,0.48); }
+
+.corner-hint {
+  position: fixed;
+  bottom: clamp(1.2rem, 3vh, 2rem);
+  right: clamp(1.5rem, 3vw, 2.5rem);
+  font-family: var(--font-ui);
+  font-size: clamp(0.46rem, 0.78vw, 0.56rem);
+  font-weight: 300;
+  color: rgba(30,28,24,0.18);
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  pointer-events: none;
+  z-index: 100;
+  transition: opacity 0.4s ease;
+}
+
+/* ── Archive link — bottom centre ───────────────────────────────── */
+.archive-link {
+  position: fixed;
+  bottom: clamp(1.2rem, 3vh, 2rem);
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: var(--font-ui);
+  font-size: clamp(0.42rem, 0.72vw, 0.52rem);
+  font-weight: 300;
+  color: rgba(20,18,14,0.35);
+  letter-spacing: 0.22em;
+  text-decoration: none;
+  text-transform: uppercase;
+  border-bottom: 0.5px solid rgba(20,18,14,0.12);
+  padding-bottom: 2px;
+  z-index: 100;
+  cursor: none;
+  transition: color 0.2s, border-color 0.2s;
+}
+.archive-link:hover {
+  color: rgba(20,18,14,0.75);
+  border-color: rgba(20,18,14,0.4);
+}
+
+/* ── Contact link ───────────────────────────────────────────────── */
+.contact-link {
+  position: fixed;
+  top: clamp(1.2rem, 3vh, 2rem);
+  left: clamp(1.5rem, 3vw, 2.5rem);
+  font-family: var(--font-ui);
+  font-size: clamp(0.42rem, 0.72vw, 0.52rem);
+  font-weight: 300;
+  color: rgba(20,18,14,0.4);
+  letter-spacing: 0.18em;
+  text-decoration: none;
+  text-transform: uppercase;
+  border-bottom: 0.5px solid rgba(20,18,14,0.15);
+  padding-bottom: 2px;
+  z-index: 100;
+  cursor: none;
+  transition: color 0.2s, border-color 0.2s;
+}
+.contact-link:hover {
+  color: rgba(20,18,14,0.8);
+  border-color: rgba(20,18,14,0.45);
+}
+
+/* ── About link ─────────────────────────────────────────────────── */
+.about-link {
+  position: fixed;
+  top: clamp(1.2rem, 3vh, 2rem);
+  right: clamp(1.5rem, 4vw, 3rem);
+  font-family: var(--font-ui);
+  font-size: clamp(0.42rem, 0.72vw, 0.52rem);
+  font-weight: 300;
+  color: rgba(20,18,14,0.4);
+  letter-spacing: 0.18em;
+  text-decoration: none;
+  text-transform: uppercase;
+  border-bottom: 0.5px solid rgba(20,18,14,0.15);
+  padding-bottom: 2px;
+  z-index: 100;
+  cursor: none;
+  transition: color 0.2s, border-color 0.2s;
+}
+.about-link:hover {
+  color: rgba(20,18,14,0.8);
+  border-color: rgba(20,18,14,0.45);
+}
+
+/* ── Active project label ───────────────────────────────────────── */
+.active-label {
+  position: fixed;
+  top: 50%;
+  right: clamp(1.5rem, 4vw, 3rem);
+  transform: translateY(-50%);
+  text-align: right;
+  pointer-events: none;
+  z-index: 100;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+.active-label.visible {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.active-label-title {
+  font-family: var(--font-display);
+  font-size: clamp(1.4rem, 3vw, 2.1rem);
+  font-weight: 300;
+  color: var(--label-fill-color);
+  /* ── Outline: crisp edge on dark thumbnails and video ── */
+  -webkit-text-stroke: var(--label-stroke-width) var(--label-stroke-color);
+  paint-order: stroke fill;
+  /* ── Shadow halo: extra lift on very dark backgrounds ── */
+  text-shadow: var(--label-shadow);
+  line-height: 1.1;
+  display: block;
+}
+
+.active-label-sub {
+  font-family: var(--font-ui);
+  font-size: clamp(0.42rem, 0.72vw, 0.53rem);
+  font-weight: 300;
+  color: rgba(30,28,24,0.36);
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  display: block;
+  margin-top: 5px;
+  text-shadow: 0 0 0.1px rgba(247,245,240,0.55);
+}
+
+.active-label-link {
+  display: inline-block;
+  margin-top: 10px;
+  font-family: var(--font-ui);
+  font-size: clamp(0.42rem, 0.72vw, 0.52rem);
+  font-weight: 300;
+  color: rgba(20,18,14,0.5);
+  letter-spacing: 0.18em;
+  text-decoration: none;
+  text-transform: uppercase;
+  border-bottom: 0.5px solid rgba(20,18,14,0.2);
+  padding-bottom: 2px;
+  cursor: none;
+  transition: color 0.2s, border-color 0.2s;
+}
+.active-label-link:hover {
+  color: rgba(20,18,14,0.85);
+  border-color: rgba(20,18,14,0.55);
+}
+
+/* ─────────────────────────────────────────────────────────────────
+   RESPONSIVE — label snaps inside the clock's lower half.
+   Fires when the viewport is ≤ 860px wide (not enough room right).
+   Uses vmin so the position tracks the clock's actual rendered size.
+───────────────────────────────────────────────────────────────── */
+@media (max-width: 860px) {
+  .active-label {
+    right: auto;
+    left: 50%;
+    /* 50% = clock centre; + 0.22 × clock-size = lower quarter */
+    top: calc(50% + min(88vw, 88vh) * 0.22);
+    transform: translateX(-50%);
+    text-align: center;
+    max-width: min(72vw, 72vh);
+  }
+  .active-label-sub,
+  .active-label-link { text-align: center; }
+}
+
+/* ─────────────────────────────────────────────────────────────────
+   CUSTOM CURSOR — inverts against any background.
+   left/top default to 50vw/50vh so the cursor is always centred
+   at page load before the first mousemove fires.
+───────────────────────────────────────────────────────────────── */
+#cursor {
+  position: fixed;
+  left: 50vw;
+  top: 50vh;
+  width: 8px; height: 8px;
+  background: #ffffff;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9999;
+  transform: translate(-50%, -50%);
+  mix-blend-mode: difference;
+}
+
+#cursor-ring {
+  position: fixed;
+  left: 50vw;
+  top: 50vh;
+  width: 32px; height: 32px;
+  border: 0.8px solid #ffffff;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9998;
+  transform: translate(-50%, -50%);
+  mix-blend-mode: difference;
+  transition: width 0.25s ease, height 0.25s ease,
+              border-color 0.25s ease, border-width 0.25s ease;
+}
