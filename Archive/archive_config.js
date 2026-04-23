@@ -25,18 +25,18 @@
 // ─────────────────────────────────────────────────────────────────────────────
 
 const ARCHIVE_MEDIA = [
-  { type: "image", src: "/Website/RendersArchive/image1.jpg", width: 180, label: "On set — monitor feed" },
-  { type: "image", src: "/Website/RendersArchive/image2.jpg", width: 220, label: "Lighting test, studio A" },
-  { type: "image", src: "/Website/RendersArchive/image3.jpg", width: 150, label: "Colour grade reference" },
-  { type: "image", src: "/Website/RendersArchive/image4.jpg", width: 200, label: "Composition study" },
-  { type: "image", src: "/Website/RendersArchive/image5.jpg", width: 240, label: "Anim blocking pass" },
-  { type: "image", src: "/Website/RendersArchive/image6.jpg", width: 160, label: "3D render — ambient occlusion" },
-  { type: "image", src: "/Website/RendersArchive/image7.jpg", width: 190, label: "Art direction moodboard" },
-  { type: "image", src: "/Website/RendersArchive/image8.jpg", width: 210, label: "VFX playblast" },
-  { type: "image", src: "/Website/RendersArchive/image22.jpg", width: 170, label: "Storyboard — frame 04" },
-  { type: "image", src: "/Website/RendersArchive/image10.jpg", width: 200, label: "Illustration — line work" },
-  { type: "image", src: "/Website/RendersArchive/image11.jpg", width: 230, label: "Showreel cut — cinematic" },
-  { type: "image", src: "/Website/RendersArchive/image12.jpg", width: 155, label: "Environment concept" }
+  { type: "image", src: "/Website/RendersArchive/image1.jpg", width: 180, label: "" },
+  { type: "image", src: "/Website/RendersArchive/image2.jpg", width: 220, label: "" },
+  { type: "image", src: "/Website/RendersArchive/image3.jpg", width: 150, label: "" },
+  { type: "image", src: "/Website/RendersArchive/image4.jpg", width: 200, label: "" },
+  { type: "image", src: "/Website/RendersArchive/image5.jpg", width: 240, label: "" },
+  { type: "image", src: "/Website/RendersArchive/image6.jpg", width: 160, label: "" },
+  { type: "image", src: "/Website/RendersArchive/image7.jpg", width: 190, label: "" },
+//  { type: "image", src: "/Website/RendersArchive/image8.jpg", width: 210, label: "" },
+//  { type: "image", src: "/Website/RendersArchive/image22.jpg", width: 170, label: "Storyboard — frame 04" },
+//  { type: "image", src: "/Website/RendersArchive/image10.jpg", width: 200, label: "Illustration — line work" },
+//  { type: "image", src: "/Website/RendersArchive/image11.jpg", width: 230, label: "Showreel cut — cinematic" },
+//  { type: "image", src: "/Website/RendersArchive/image12.jpg", width: 155, label: "Environment concept" }
 ];
 
 const ARCHIVE_PHYSICS = {
