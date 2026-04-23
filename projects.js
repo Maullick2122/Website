@@ -35,7 +35,7 @@ const PROJECTS = [
     image:   "Projects/Engine/Engine Thumbnail.png",                                          // e.g. "images/lighting-thumb.jpg"
     colors:  ["#1a0800", "#6b2a00", "#d4580a", "#ffb347"],
     pattern: "radial",
-    href:    "projects/Engine/engine.html",
+    href:    "Projects/Engine/engine.html",
     video:   "Projects/Engine/Videos/PPT.mp4"
   },
   {
