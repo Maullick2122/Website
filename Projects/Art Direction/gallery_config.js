@@ -97,7 +97,7 @@ const GALLERY_COLLECTIONS = [
     ]
   },
   {
-    title:  "Final Major Project",
+    title:  "That Feeling of an Existential Crisis",
     sub:    "University Project | Short animated film (2023-24)",
     href:   "https://youtu.be/icCwZnxJMOE",
     media: [
