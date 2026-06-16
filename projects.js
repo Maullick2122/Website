@@ -23,7 +23,7 @@ const PROJECTS = [
   {
     label:   "Cinematics & CGI",
     sub:     "Showreel",
-    image:   "Renders/Cliff.png",                                          // e.g. "images/3d-thumb.jpg"
+    image:   "Renders/Cliff.png",                                          
     colors:  ["#1a0f2e", "#3d2878", "#6b47c4", "#c4aaff"],
     pattern: "grid",
     href:    "Projects/Showreel/Project_Showreel.html",
@@ -32,7 +32,7 @@ const PROJECTS = [
   {
     label:   "Engines",
     sub:     "Graphics & Rendering",
-    image:   "Projects/Engine/Engine Thumbnail.png",                                          // e.g. "images/lighting-thumb.jpg"
+    image:   "Projects/Engine/Engine Thumbnail.png",                                          
     colors:  ["#1a0800", "#6b2a00", "#d4580a", "#ffb347"],
     pattern: "radial",
     href:    "/Website/Projects/Engine/engine.html",
@@ -41,7 +41,7 @@ const PROJECTS = [
   {
     label:   "Art Direction",
     sub:     "Environmental Storytelling",
-    image:   "/Website/Renders/OneMoreDream.png",                                          // e.g. "images/art-direction-thumb.jpg"
+    image:   "/Website/Renders/OneMoreDream.png",                                          
     colors:  ["#001a12", "#004d38", "#008060", "#60ddb8"],
     pattern: "diagonal",
     href:    "Projects/Art Direction/environment_concepts.html",
@@ -50,7 +50,7 @@ const PROJECTS = [
   {
     label:   "3D scanning",
     sub:     "LiDar & Photogrammetry | GooseyMoo",
-    image:   "Renders/Goosey.png",                                          // e.g. "images/cinematics-thumb.jpg"
+    image:   "Renders/Goosey.png",                                         
     colors:  ["#0d0d1a", "#1a1a40", "#2e3a7a", "#7090c0"],
     pattern: "horizontal",
     href:    "https://www.fab.com/sellers/GooseyMoo",
@@ -59,7 +59,7 @@ const PROJECTS = [
   {
     label:   "XR & Immersive",
     sub:     "VR | AR | MR",
-    image:   "",                                          // e.g. "images/animation-thumb.jpg"
+    image:   "",                                          
     colors:  ["#1a0020", "#500060", "#a020c0", "#e090f0"],
     pattern: "radial",
     href:    "/Website/Projects/Immersive/Immersive.html",
@@ -68,7 +68,7 @@ const PROJECTS = [
   {
     label:   "Video editing",
     sub:     "Editing & Documentation",
-    image:   "Myself/09.png",                                          // e.g. "images/colour-grading-thumb.jpg"
+    image:   "Myself/09.png",                                          
     colors:  ["#0a0a00", "#303000", "#707000", "#d4cc00"],
     pattern: "split",
     href:    "/Website/Placeholder/Placeholder.html",
@@ -77,7 +77,7 @@ const PROJECTS = [
   {
     label:   "Client Work",
     sub:     "3D printing and Props",
-    image:   "",                                          // e.g. "images/illustration-thumb.jpg"
+    image:   "",                                          
     colors:  ["#1a0008", "#600020", "#c0004a", "#f07090"],
     pattern: "diagonal",
     href:    "/Website/Placeholder/Placeholder.html",
@@ -86,7 +86,7 @@ const PROJECTS = [
   {
     label:   "Archive",
     sub:     "Older works & Videos",
-    image:   "",                                          // e.g. "images/vfx-thumb.jpg"
+    image:   "",                                          
     colors:  ["#001a1a", "#004040", "#008080", "#00e0e0"],
     pattern: "grid",
     href:    "/Website/Archive/archive.html",
