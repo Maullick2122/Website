@@ -33,10 +33,10 @@ const GALLERY_COLLECTIONS = [
     title:  "500 Miles",
     sub:    "Animation | Environment design | Painterly | Compositing | Rendering",
     media: [
-      { type: "image", src: "/Website/Renders/500 Miles/Thumbnail.png",},
-      { type: "video", src: "/Website/Renders/500 Miles/",},
-      { type: "image", src: "/Website/Renders/500 Miles/Thumbnail.png",},
-      { type: "image", src: "/Website/Renders/500 Miles/Thumbnail.png",},
+      { type: "image", src: "/Website/Renders/500 Miles/painted.png",},
+      { type: "video", src: "/Website/Renders/500 Miles/500Miles_Github.mp4",},
+      { type: "image", src: "/Website/Renders/500 Miles/roses.jpg",},
+      { type: "image", src: "/Website/Renders/500 Miles/sun.jpg",},
       
     ]
   },
