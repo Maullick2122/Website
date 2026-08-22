@@ -30,6 +30,18 @@
 
 const GALLERY_COLLECTIONS = [
  {
+    title:  "Armoured Core",
+    sub:    "Animation | Environment design | Painterly | Compositing | Rendering",
+    media: [
+      { type: "image", src: "/Website/Renders/500 Miles/painted.png",},
+      { type: "video", src: "/Website/Renders/500 Miles/500Miles_Github.mp4",},
+      { type: "image", src: "/Website/Renders/500 Miles/roses.jpg",},
+      { type: "image", src: "/Website/Renders/500 Miles/sun.jpg",},
+      
+    ]
+  },
+
+  {
     title:  "500 Miles",
     sub:    "Animation | Environment design | Painterly | Compositing | Rendering",
     media: [
