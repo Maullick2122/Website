@@ -35,6 +35,9 @@ const GALLERY_COLLECTIONS = [
     media: [
       { type: "image", src: "/Website/Renders/500 Miles/Thumbnail.png",},
       { type: "video", src: "/Website/Renders/500 Miles/",},
+      { type: "image", src: "/Website/Renders/500 Miles/Thumbnail.png",},
+      { type: "image", src: "/Website/Renders/500 Miles/Thumbnail.png",},
+      
     ]
   },
 
