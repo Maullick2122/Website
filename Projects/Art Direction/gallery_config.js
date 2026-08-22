@@ -30,6 +30,15 @@
 
 const GALLERY_COLLECTIONS = [
   {
+    title:  "Idling Away",
+    sub:    "Animation | Character design | Prop Design | Rendering",
+    media: [
+      { type: "video", src: "/Website/Renders/Gelid/Robot_Arm_GitHub.mp4",},
+      { type: "video", src: "/Website/Renders/Gelid/RobotArm_Process&Result_Github.mp4",},
+    ]
+  },
+
+  {
     title:  "Gelid Yuth",
     sub:    "Environment Concept | Character design | Prop Design | Cloth design | Volumetics & Rendering",
     media: [
