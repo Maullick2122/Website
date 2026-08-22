@@ -33,9 +33,9 @@ const GALLERY_COLLECTIONS = [
     title:  "The Present",
     sub:    "Animation | Environment design | Layered | Compositing | Rendering",
     media: [
-      { type: "image", src: "/Website/Renders/RobotArm/Thumbnail.png",},
-      { type: "video", src: "/Website/Renders/RobotArm/Robot_Arm_GitHub.mp4",},
-      { type: "video", src: "/Website/Renders/RobotArm/RobotArm_Process&Result_Github.mp4",},
+      { type: "image", src: "/Website/Renders/The Present/Thumbnail.png",},
+      { type: "video", src: "/Website/Renders/The Present/Hopecore_GitHub.mp4",},
+      { type: "video", src: "/Website/Renders/The Present/Short_Breakdown_Hope.mp4",},
     ]
   },
 
