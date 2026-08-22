@@ -29,6 +29,15 @@
 // ─────────────────────────────────────────────────────────────────────────────
 
 const GALLERY_COLLECTIONS = [
+ {
+    title:  "500 Miles",
+    sub:    "Animation | Environment design | Painterly | Compositing | Rendering",
+    media: [
+      { type: "image", src: "/Website/Renders/500 Miles/Thumbnail.png",},
+      { type: "video", src: "/Website/Renders/500 Miles/",},
+    ]
+  },
+
   {
     title:  "The Present",
     sub:    "Animation | Environment design | Layered | Compositing | Rendering",
