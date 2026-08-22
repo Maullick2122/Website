@@ -33,6 +33,7 @@ const GALLERY_COLLECTIONS = [
     title:  "Idling Away",
     sub:    "Animation | Character design | Prop Design | Rendering",
     media: [
+      { type: "image", src: "/Website/Renders/Gelid/Render_2.png",},
       { type: "video", src: "/Website/Renders/RobotArm/Robot_Arm_GitHub.mp4",},
       { type: "video", src: "/Website/Renders/RobotArm/RobotArm_Process&Result_Github.mp4",},
     ]
