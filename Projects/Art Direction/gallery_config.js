@@ -30,6 +30,16 @@
 
 const GALLERY_COLLECTIONS = [
   {
+    title:  "The Present",
+    sub:    "Animation | Environment design | Layered | Compositing | Rendering",
+    media: [
+      { type: "image", src: "/Website/Renders/RobotArm/Thumbnail.png",},
+      { type: "video", src: "/Website/Renders/RobotArm/Robot_Arm_GitHub.mp4",},
+      { type: "video", src: "/Website/Renders/RobotArm/RobotArm_Process&Result_Github.mp4",},
+    ]
+  },
+
+  {
     title:  "Idling Away",
     sub:    "Animation | Character design | Prop Design | Rendering",
     media: [
