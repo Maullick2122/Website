@@ -164,6 +164,7 @@ const GALLERY_COLLECTIONS = [
     title:  "Haiku",
     sub:    "Ghost of Tsushima inpired | Environment art | Blender | Photoshop | Layer render ",
     media: [
+       { type: "image", src: "/Website/Renders/Haiku/",},
       { type: "image", src: "/Website/Renders/Haiku/Kurosawa Insp Tree Haiku 1@2x.png",},
       { type: "image", src: "/Website/Renders/Haiku/Kurosawa Insp Tree Haiku 2@2x.png",},
       { type: "image", src: "/Website/Renders/Haiku/Kurosawa Insp Tree Haiku 3@2x.png",},
