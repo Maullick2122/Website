@@ -79,6 +79,7 @@ const GALLERY_COLLECTIONS = [
     title:  "Gelid Yuth",
     sub:    "Environment Concept | Character design | Prop Design | Cloth design | Volumetics & Rendering",
     media: [
+      { type: "image", src: "/Website/Renders/Gelid/Gelid Yuth.png",},
       { type: "image", src: "/Website/Renders/Gelid/Render_2.png",},
       { type: "video", src: "/Website/Renders/Gelid/gelid yuth.mp4",},
       { type: "image", src: "/Website/Renders/Gelid/Render_1.png",},
