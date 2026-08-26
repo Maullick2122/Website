@@ -33,7 +33,7 @@ const GALLERY_COLLECTIONS = [
     title:  "Armoured Core",
     sub:    "Animation | Environment design | Painterly | Compositing | Rendering",
     media: [
-      { type: "image", src: "/Website/Renders/AC/",},
+      { type: "image", src: "/Website/Renders/AC/blueprintAC.png",},
       { type: "video", src: "/Website/Renders/AC/",},
       { type: "image", src: "/Website/Renders/AC/",},
       { type: "image", src: "/Website/Renders/AC/",},
