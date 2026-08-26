@@ -155,6 +155,7 @@ const GALLERY_COLLECTIONS = [
     title:  "Open Up",
     sub:    "3D Scanning | Photorealism | Fisheye | Mandella Catalogue style",
     media: [
+      { type: "image", src: "/Website/Renders/Open up/Open UP.png"},
       { type: "image", src: "/Website/Renders/Open up/Fisheye-post.png"},
       { type: "image", src: "/Website/Renders/Open up/Fisheye-1.png"},
       { type: "image", src: "/Website/Renders/Open up/Fisheye-clay.png"},
