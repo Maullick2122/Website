@@ -177,7 +177,6 @@ const GALLERY_COLLECTIONS = [
     sub:    "Remake of Hunters dream | Bloodborne | Architecture Modelling | Remake ",
     media: [
       { type: "image", src: "/Website/Renders/Hunters Dream/Hunters dream.png", },
-      
     ]
   },
   {
