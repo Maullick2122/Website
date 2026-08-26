@@ -207,6 +207,7 @@ const GALLERY_COLLECTIONS = [
     title:  "Walking Home",
     sub:    "Draconic Environment | Dragon Rig | Dragon Texture | Jagged rock modelling | Cloud volumetrics",
     media: [
+      { type: "image", src: "/Website/Renders/Walking Home/Walking Home (Blur).png", },
       { type: "image", src: "/Website/Renders/Walking Home/03.png", },
       { type: "image", src: "/Website/Renders/Walking Home/01.png", },
       { type: "image", src: "/Website/Renders/Walking Home/02.png", },
