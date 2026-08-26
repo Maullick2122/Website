@@ -196,6 +196,7 @@ const GALLERY_COLLECTIONS = [
     title:  "Grace of the Sun",
     sub:    "Animation | Snow | Particles | Robe",
     media: [
+      { type: "image", src: "/Website/Renders/Sun/Grace of the Sun.png"},
       { type: "image", src: "/Website/Renders/Sun/Grace of the Sun@2x.png"},
       { type: "image", src: "/Website/Renders/Sun/Grace of the Sun 2@2x.png"},
       { type: "image", src: "/Website/Renders/Sun/Grace of the Sun 3@2x.png"},
