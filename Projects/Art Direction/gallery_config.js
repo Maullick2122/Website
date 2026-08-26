@@ -94,6 +94,7 @@ const GALLERY_COLLECTIONS = [
     title:  "Change",
     sub:    "Environment | Cloth | Custom Models | Volumetrics",
     media: [
+    { type: "image", src: "/Website/Renders/Change/Change.png" },
     { type: "image", src: "/Website/Renders/Change/1.png" },
     { type: "image", src: "/Website/Renders/Change/2.png" },
     { type: "image", src: "/Website/Renders/Change/3.png" },
