@@ -33,6 +33,7 @@ const GALLERY_COLLECTIONS = [
     title:  "Armoured Core",
     sub:    "Environment | Character design | Stylised | Compositing | Rendering",
     media: [
+      { type: "image", src: "/Website/Renders/AC/AC.png",},
       { type: "image", src: "/Website/Renders/AC/blueprintAC.png",},
       { type: "video", src: "/Website/Renders/AC/AC_Env_Showcase.mp4",},
       { type: "video", src: "/Website/Renders/AC/turntable.mp4",},
