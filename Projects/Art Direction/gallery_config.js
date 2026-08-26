@@ -31,7 +31,7 @@
 const GALLERY_COLLECTIONS = [
  {
     title:  "Armoured Core",
-    sub:    "Animation | Environment design | Painterly | Compositing | Rendering",
+    sub:    "Environment | Character design | Stylised | Compositing | Rendering",
     media: [
       { type: "image", src: "/Website/Renders/AC/blueprintAC.png",},
       { type: "video", src: "/Website/Renders/AC/",},
@@ -43,7 +43,7 @@ const GALLERY_COLLECTIONS = [
 
   {
     title:  "500 Miles",
-    sub:    "Animation | Environment design | Painterly | Compositing | Rendering",
+    sub:    "Animation | Environment Concept | Painterly | Compositing | Rendering",
     media: [
       { type: "image", src: "/Website/Renders/500Miles/painted.png",},
       { type: "video", src: "/Website/Renders/500Miles/500Miles_Github.mp4",},
@@ -55,7 +55,7 @@ const GALLERY_COLLECTIONS = [
 
   {
     title:  "The Present",
-    sub:    "Animation | Environment design | Layered | Compositing | Rendering",
+    sub:    "Animation | Nature | Layered | Compositing | Rendering",
     media: [
       { type: "image", src: "/Website/Renders/The Present/Thumbnail.png",},
       { type: "video", src: "/Website/Renders/The Present/Hopecore_GitHub.mp4",},
