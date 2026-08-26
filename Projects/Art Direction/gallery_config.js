@@ -185,6 +185,7 @@ const GALLERY_COLLECTIONS = [
     title:  "Mitski Collection",
     sub:    "Poster made for Songs",
     media: [
+      { type: "image", src: "/Website/Renders/Mitski Posters/Mitski Collection.png",},
       { type: "image", src: "/Website/Renders/Mitski Posters/Heaven.png",},
       { type: "image", src: "/Website/Renders/Mitski Posters/TheFrost.png",},
       { type: "image", src: "/Website/Renders/Mitski Posters/The deal.png",},
