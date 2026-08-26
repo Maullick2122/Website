@@ -70,7 +70,7 @@ const GALLERY_COLLECTIONS = [
     sub:    "Animation | Character design | Prop Design | Rendering",
     media: [
       { type: "image", src: "/Website/Renders/RobotArm/Idling Away.png",},
-      { type: "video", src: "/Website/Renders/RobotArm/RobotArm_GitHub.mp4",},
+      { type: "video", src: "/Website/Renders/RobotArm/RobotArm_Github.mp4",},
       { type: "video", src: "/Website/Renders/RobotArm/RobotArm_Process&Result_Github.mp4",},
     ]
   },
