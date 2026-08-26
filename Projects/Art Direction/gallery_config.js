@@ -104,6 +104,14 @@ const GALLERY_COLLECTIONS = [
     { type: "video", src: "/Website/Renders/Change/Change.mp4" },
   ]
   },
+  
+  {
+    title:  "Let Down Your Chains",
+    sub:    "Environment | Cloth | Horse Animation | Volumetrics | Short Film",
+    media: [
+    { type: "videoo", src: "/Website/Renders/Change/1.png" },
+  ]
+  },
 
   {
     title:  "2.5D",
