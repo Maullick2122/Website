@@ -110,7 +110,7 @@ const GALLERY_COLLECTIONS = [
     sub:    "Environment | Cloth | Horse Animation | Volumetrics | Short Film",
     media: [
     { type: "image", src: "/Website/Renders/Let Down your chains/Let down your chains.png" },
-    { type: "video", src: "/Website/Renders/Let Down your chains/Let Down your Chains_GitHub.mp4" },
+    { type: "video", src: "/Website/Renders/Let Down your chains/Let Down Your Chains_GitHub.mp4" },
   ]
   },
 
