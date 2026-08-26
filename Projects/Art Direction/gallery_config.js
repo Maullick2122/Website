@@ -132,6 +132,7 @@ const GALLERY_COLLECTIONS = [
     title:  "Artroom",
     sub:    "Lighting Study | Basic Modelling | Environment Concept | Volumetics & Rendering",
     media: [
+      { type: "image", src: "/Website/Renders/Artroom/Artroom.png"},
       { type: "image", src: "/Website/Renders/Artroom/Artroom1.JPEG"},
       { type: "image", src: "/Website/Renders/Artroom/Artroom2.JPEG"},
       { type: "image", src: "/Website/Renders/Artroom/Artroom3.JPEG"},
