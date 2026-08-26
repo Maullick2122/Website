@@ -34,8 +34,8 @@ const GALLERY_COLLECTIONS = [
     sub:    "Environment | Character design | Stylised | Compositing | Rendering",
     media: [
       { type: "image", src: "/Website/Renders/AC/blueprintAC.png",},
-      { type: "video", src: "/Website/Renders/AC/",},
-      { type: "image", src: "/Website/Renders/AC/",},
+      { type: "video", src: "/Website/Renders/AC/AC_Env_Showcase",},
+      { type: "video", src: "/Website/Renders/AC/turntable",},
       { type: "image", src: "/Website/Renders/AC/",},
       
     ]
